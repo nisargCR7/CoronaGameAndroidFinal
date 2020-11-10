@@ -404,21 +404,21 @@ function setup() {
 
 
 
- virus1.visible=false
- virus2.visible=false
- virus3.visible=false
- virus4.visible=false
- virus5.visible=false
- virus6.visible=false
- virus7.visible=false
- haldi1.visible=false
- haldi2.visible=false
- mask1.visible=false
- mask2.visible=false
- sanitizer1.visible=false
- sanitizer2.visible=false 
- antitode.visible=false
- mazerunner.visible=false
+//  virus1.visible=false
+//  virus2.visible=false
+//  virus3.visible=false
+//  virus4.visible=false
+//  virus5.visible=false
+//  virus6.visible=false
+//  virus7.visible=false
+//  haldi1.visible=false
+//  haldi2.visible=false
+//  mask1.visible=false
+//  mask2.visible=false
+//  sanitizer1.visible=false
+//  sanitizer2.visible=false 
+//  antitode.visible=false
+//  mazerunner.visible=false
 
   
 //   wall1.visible=false
@@ -522,7 +522,7 @@ if(gameState === 2){
 
 if(gameState === 3){
   clear();
-  game.start4()
+  game.maze1()
 }
 if(gameState === 4){
   game.start5()
