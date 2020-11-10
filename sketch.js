@@ -196,19 +196,19 @@ function setup() {
  man.visible=false
 
  
- up2 = createImg('images/Box.png')
+ up2 = createImg('images/blank.png')
  up2.size(Width/18,Height/10);
  up2.position(Width/1.13,Height/1.47)
 
- down2 = createImg('images/Box.png')
+ down2 = createImg('images/blank.png')
  down2.size(Width/18,Height/10);
  down2.position(Width/1.13,Height/1.12)
 
- left2 = createImg('images/Box.png')
+ left2 = createImg('images/blank.png')
  left2.size(Width/18,Height/10);
  left2.position(Width/1.22,Height/1.26)
 
- right2 = createImg('images/Box.png')
+ right2 = createImg('images/blank.png')
  right2.size(Width/18,Height/10);
  right2.position(Width/1.06,Height/1.26)
 
