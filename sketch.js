@@ -248,7 +248,7 @@ function setup() {
 
  wall17 = createSprite(Width/3.95,Height/1.55,Width/95,Height/5.4)
 
- wall18 = createSprite(Width/5,Height/1.38,Width/95,Height/5.8)
+ wall18 = createSprite(Width/5,Height/1.38,Width/95,Height/6.2)
 
  wall19 = createSprite(Width/1.55,Height/1.95,Width/95,Height/3.1)
 
@@ -264,7 +264,7 @@ function setup() {
 
  wall25 = createSprite(Width/2.53,Height/1.43,Width/95,Height/17)
 
- wall26 = createSprite(Width/2.53,Height/1.95,Width/95,Height/5)
+ wall26 = createSprite(Width/2.53,Height/1.95,Width/95,Height/5.4)
 
  wall27 = createSprite(Width/2.05,Height/3.4,Width/2.2,Width/95)
 
@@ -298,9 +298,9 @@ function setup() {
 
  wall42 = createSprite(Width/3.4,Height/1.35,Width/12,Width/95)
 
- wall43 = createSprite(Width/1.5,Height/1.155,Width/2.8,Width/95)
+ wall43 = createSprite(Width/1.5,Height/1.155,Width/2.8,Width/105)
 
- wall44 = createSprite(Width/3.8,Height/1.155,Width/3.6,Width/95)
+ wall44 = createSprite(Width/3.8,Height/1.155,Width/3.6,Width/105)
 
  wall45 = createSprite(Width/1.35,Height/1.45,Width/17,Width/95)
 
@@ -314,7 +314,7 @@ function setup() {
  virus1 = createSprite(Width/6.2,Height/6,Width/95,Width/95)
  virus1.addAnimation("v",virusimg)
  virus1.scale=Height/2500
- virus1.velocityY=5
+ virus1.velocityY=3
  virus1.setCollider("circle",0,0,100)
  virusGroup2.add(virus1)
  
@@ -322,42 +322,42 @@ function setup() {
  virus2.addAnimation("v",virusimg)
  virus2.scale=Height/2500
  virus2.setCollider("circle",0,0,100)
- virus2.velocityY=7
+ virus2.velocityY=4
  virusGroup2.add(virus2)
 
  virus3 = createSprite(Width/2.8,Height/1.2,Width/95,Width/95)
  virus3.addAnimation("v",virusimg)
  virus3.scale=Height/3500
  virus3.setCollider("circle",0,0,100)
- virus3.velocityX=-5
+ virus3.velocityX=-4
  virusGroup2.add(virus3)
 
  virus4 = createSprite(Width/1.9,Height/1.56,Width/95,Width/95)
  virus4.addAnimation("v",virusimg)
  virus4.scale=Height/3500
  virus4.setCollider("circle",0,0,100)
- virus4.velocityX=-6
+ virus4.velocityX=-5
  virusGroup2.add(virus4)
 
  virus5 = createSprite(Width/1.2,Height/1.43,Width/95,Width/95)
  virus5.addAnimation("v",virusimg)
  virus5.scale=Height/3500
  virus5.setCollider("circle",0,0,100)
- virus5.velocityY=-6
+ virus5.velocityY=-5
  virusGroup2.add(virus5)
 
  virus6 = createSprite(Width/4.3,Height/1.43,Width/95,Width/95)
  virus6.addAnimation("v",virusimg)
  virus6.scale=Height/3000
  virus6.setCollider("circle",0,0,100)
- virus6.velocityY=-7
+ virus6.velocityY=-6
  virusGroup2.add(virus6)
 
  virus7 = createSprite(Width/1.9,Height/2.5,Width/95,Width/95)
  virus7.addAnimation("v",virusimg)
  virus7.scale=Height/3500
  virus7.setCollider("circle",0,0,100)
- virus7.velocityX=6
+ virus7.velocityX=5
  virusGroup2.add(virus7)
 
 
@@ -404,21 +404,21 @@ function setup() {
 
 
 
-//  virus1.visible=false
-//  virus2.visible=false
-//  virus3.visible=false
-//  virus4.visible=false
-//  virus5.visible=false
-//  virus6.visible=false
-//  virus7.visible=false
-//  haldi1.visible=false
-//  haldi2.visible=false
-//  mask1.visible=false
-//  mask2.visible=false
-//  sanitizer1.visible=false
-//  sanitizer2.visible=false 
-//  antitode.visible=false
-//  mazerunner.visible=false
+ virus1.visible=false
+ virus2.visible=false
+ virus3.visible=false
+ virus4.visible=false
+ virus5.visible=false
+ virus6.visible=false
+ virus7.visible=false
+ haldi1.visible=false
+ haldi2.visible=false
+ mask1.visible=false
+ mask2.visible=false
+ sanitizer1.visible=false
+ sanitizer2.visible=false 
+ antitode.visible=false
+ mazerunner.visible=false
 
   
   wall1.visible=false
@@ -446,29 +446,29 @@ function setup() {
   wall23.visible=false
   wall24.visible=false
   wall25.visible=false
-//   wall26.visible=false
-//   wall27.visible=false
-//   wall28.visible=false
-//   wall29.visible=false
-//   wall30.visible=false
-//   wall31.visible=false
-//   wall32.visible=false
-//   wall33.visible=false
-//   wall34.visible=false
-//   wall35.visible=false
-//   wall36.visible=false
-//   wall37.visible=false
-//   wall38.visible=false
-//   wall39.visible=false
-//   wall40.visible=false
-//   wall41.visible=false
-//   wall42.visible=false
-//   wall43.visible=false
-//   wall44.visible=false
-//   wall45.visible=false
-//   wall46.visible=false
-//   wall47.visible=false
-//   wall48.visible=false
+  wall26.visible=false
+  wall27.visible=false
+  wall28.visible=false
+  wall29.visible=false
+  wall30.visible=false
+  wall31.visible=false
+  wall32.visible=false
+  wall33.visible=false
+  wall34.visible=false
+  wall35.visible=false
+  wall36.visible=false
+  wall37.visible=false
+  wall38.visible=false
+  wall39.visible=false
+  wall40.visible=false
+  wall41.visible=false
+  wall42.visible=false
+  wall43.visible=false
+  wall44.visible=false
+  wall45.visible=false
+  wall46.visible=false
+  wall47.visible=false
+  wall48.visible=false
 
 
  for(var i=0;i<16;i++){
@@ -522,7 +522,7 @@ if(gameState === 2){
 
 if(gameState === 3){
   clear();
-  game.maze1()
+  game.start4()
 }
 if(gameState === 4){
   game.start5()
@@ -704,67 +704,67 @@ man.velocityX=man_vel;
 
     if(virus6.isTouching(wall38)){
 
-        virus6.velocityY=-7
+        virus6.velocityY=-6
      
        }
     if(virus6.isTouching(wall7)){
      
-        virus6.velocityY=7
+        virus6.velocityY=6
       
       } 
 
     if(virus3.isTouching(wall21)){
 
-        virus3.velocityX=5
+        virus3.velocityX=4
      
     }
     if(virus3.isTouching(wall23)){
      
-        virus3.velocityX=-5
+        virus3.velocityX=-4
       
     } 
     
     if(virus2.isTouching(wall45)){
 
-          virus2.velocityY=-5
+          virus2.velocityY=-4
        
       }
       if(virus2.isTouching(wall6)){
        
-          virus2.velocityY=5
+          virus2.velocityY=4
         
       }
           
     if(virus5.isTouching(wall43)){
 
-      virus5.velocityY=-6
+      virus5.velocityY=-5
          
       }
      if(virus5.isTouching(wall30)){
          
-        virus5.velocityY=6
+        virus5.velocityY=5
           
       }     
 
       if(virus4.isTouching(wall20)){
 
-        virus4.velocityX=6
+        virus4.velocityX=5
            
         }
        if(virus4.isTouching(wall19)){
            
-        virus4.velocityX=-6
+        virus4.velocityX=-5
             
         }
 
     if(virus7.isTouching(wall20)){
 
-      virus7.velocityX=6
+      virus7.velocityX=5
              
     }
       if(virus7.isTouching(wall19)){
              
-        virus7.velocityX=-6
+        virus7.velocityX=-5
               
       }
         
@@ -937,7 +937,8 @@ function keyReleased() {
     mazerunner.changeAnimation("left",left_stand)
   }
   
-}}
+}
+}
 
 function counting(){
 if(state===1){
@@ -990,6 +991,51 @@ function touchEnded(){
   
 }
   }
+  function touchMoved(){
+    if(gameState===13){
+    if(mstate==="right"){
+      mazerunner.velocityX=0
+      mazerunner.velocityY=0
+      mazerunner.changeAnimation("right",right_stand)
+      mouseX=0
+      mouseY=0
+      mstate=0
+    }
+    
+    
+    if(mstate==="left"){
+      mazerunner.velocityX=0
+      mazerunner.velocityY=0
+      mazerunner.changeAnimation("left",left_stand)
+      mouseX=0
+      mouseY=0
+      mstate=0
+    
+    }
+    
+    
+    if(mstate==="up"){
+     mazerunner.velocityX=0
+     mazerunner.velocityY=0
+     mazerunner.changeAnimation("up",up_stand)
+     mouseX=0
+      mouseY=0
+      mstate=0
+    }
+    
+    
+    if(mstate==="down"){
+     mazerunner.velocityX=0
+     mazerunner.velocityY=0
+     mazerunner.changeAnimation("down",down_stand)
+     mouseX=0
+     mouseY=0
+     mstate=0
+    }    
+    
+    
+  }
+    }
   function keyPressed(){
     if(enterstate===1){
     if(keyCode===13){
