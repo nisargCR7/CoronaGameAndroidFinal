@@ -4,6 +4,7 @@ class Form {
     this.continue = createImg('images/continue_but.png')
     this.continue.size(Width/4,Height/8);
     this.continue.position(Width/4*3, Height/4*3);
+    this.continue.style('zIndex',100)
 
     this.input = createInput("");
     this.input.style('font-size',Height/13+'px');
@@ -17,11 +18,14 @@ class Form {
     this.button = createImg('images/start_but.png');
     this.button.size(Width/5,Height/7);
     this.button.position(Width/5*4, Height/8*6);
-    
+    this.button.style('zIndex',100)
+
     this.playbut = createImg('images/play_but.png')
     this.playbut.size(Width/4,Height/7);
     this.playbut.position(Width/2-Width/8, Height/8*6);
-    
+    this.playbut.style('zIndex',100)
+
+
     this.txt=createDiv('')
     this.txt.style('fontSize',Width/20+"px")
     this.txt.style('zIndex',1)
@@ -49,12 +53,12 @@ this.input.show();
   display(){
   background(img1)
   this.hide()
-  this.hover(this.playbut,"play") 
-    this.playbut.mousePressed(()=>{
   
-  form.playbut.hide()
+this.playbut.mousePressed(()=>{
+  
+  
   logo_music.play()
-  seconds=60
+  seconds=59
   playerCount+=1;
   gameState+=0.5;
   player.index = playerCount;
@@ -62,7 +66,6 @@ this.input.show();
   player.updateCount(playerCount);
     
 })
- 
 }
 
   display2(){
@@ -116,8 +119,6 @@ display3(){
   
   
   this.button.mousePressed(()=>{
-   
-    
     player.name = this.input.value();
     if(player.name===""){
       this.txt.show() 
