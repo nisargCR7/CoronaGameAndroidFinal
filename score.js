@@ -60,9 +60,13 @@ class Score{
     checkScore(){
     store_min=9-store_min
     store_sec=60-store_sec
-    
-    if(store_min<Minutes[0]&&store_sec<Seconds[0]){
-        
+    store_sec2=store_min*60+store_sec
+    for(var a=0;a<5;a++){
+      Seconds2[a]=Minutes[a]*60+Seconds[a]            
+      
+     }
+ 
+    if(store_sec2<Seconds2[0]){
       for(var i=3;i>-1;i--){
         
         this.updateM(Minutes[i],i+2)
@@ -77,19 +81,22 @@ class Score{
         
  
       }
-    if(store_min<Minutes[1]&&store_sec<Seconds[1]&&store_min>Minutes[0]&&store_sec>Seconds[0]){
+
+
+    if(store_sec2<Seconds2[1]&&store_sec2>Seconds2[0]){
       
       for(var i=2;i>-1;i--){
         this.updateM(Minutes[i],i+2)
         this.updateS(Seconds[i],i+2)
         this.updateN(Name[i],i+2)
       }
+
         this.updateM(store_min,2)
         this.updateS(store_sec,2)
         this.updateN(player.name,2)
         
       }
-    if(store_min<Minutes[2]&&store_sec<Seconds[2]&&store_min>Minutes[1]&&store_sec>Seconds[1]){
+    if(store_sec2<Seconds2[2]&&store_sec2>Seconds2[1]){
       for(var i=1;i>-1;i--){
         this.updateM(Minutes[i],i+2)
         this.updateS(Seconds[i],i+2)
@@ -100,24 +107,26 @@ class Score{
         this.updateN(player.name,3)
        
     }
-    if(store_min<Minutes[3]&&store_sec<Seconds[3]&&store_min>Minutes[2]&&store_sec>Seconds[2]){
+    if(store_sec2<Seconds2[3]&&store_sec2>Seconds2[2]){
       for(var i=0;i>-1;i--){
         this.updateM(Minutes[i],i+2)
         this.updateS(Seconds[i],i+2)
         this.updateN(Name[i],i+2)
       }
+
         this.updateM(store_min,4)
         this.updateS(store_sec,4)
         this.updateN(player.name,4)
         
       }
-    if(store_min<Minutes[4]&&store_sec<Seconds[4]&&store_min>Minutes[3]&&store_sec>Seconds[3]){
+    if(store_sec2<Seconds2[4]&&store_sec2>Seconds2[3]){
+
         this.updateM(store_min,5)
         this.updateS(store_sec,5)
         this.updateN(player.name,5)
         
       }
-    if(store_min>Minutes[4]&&store_sec>Seconds[4]){
+    if(store_sec2>Seconds2[4]){
         
         
         
