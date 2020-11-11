@@ -5,9 +5,9 @@ var gameState=0;
 var database;
 var playerCount;
 var img0,img1,img2,img3,room1,spark,virusimg,marketimg,Left,Right,level1,level2,level3,room2,room3,end,maze,labdoor,win,message1,message2,message3,message4,win1,win2,win3;
-var vel=Width/300,man,man_vel=Width/100,virusGroup,player_ans,store_sec=0,store_min=0;
+var vel=Width/1000,man,man_vel=Width/100,virusGroup,player_ans,store_sec=0,store_min=0;
 var wrong_music,correct_music,die_music,logo_miusic,cough_music,crowd_music
-var seconds=60
+var seconds=59
 var minutes=9
 var Questions=[]
 var Minutes=[]
@@ -18,13 +18,15 @@ var r,rr=7
 var Options=[]
 var Answers=[]
 var ans=0
+var Seconds2=[]
 var life=1
 var x1,y1
 var speed=Height/100
 var x2=Width/3,y2=Height/26
 var state=1
 var count,virusGroup2
-var enterstate
+var enterstate=0
+var store_sec2
 var Clue=[
   "I am an idiot box... find me and click on me",
   "I was invented by 2 brothers... find me",
@@ -177,7 +179,6 @@ function setup() {
 
   game = new Game()
   game.start()
-  game.getState()
   player.getCount()
  
  q=new Q()
@@ -322,7 +323,7 @@ function setup() {
  virus2.addAnimation("v",virusimg)
  virus2.scale=Height/2500
  virus2.setCollider("circle",0,0,100)
- virus2.velocityY=4
+ virus2.velocityY=3
  virusGroup2.add(virus2)
 
  virus3 = createSprite(Width/2.8,Height/1.2,Width/95,Width/95)
@@ -507,6 +508,16 @@ function  draw() {
 //document.body.style.overflow = "hidden";
 //background(0)
 // screen.orientation.lock('portrait')
+// canvas.touch-action: manipulation;
+if(gameState===0){
+
+  if(seconds<58){
+  form.playbut.show()
+  form.hover(form.playbut,"play") 
+  
+}}else{
+  form.playbut.hide()
+}
 if(gameState === 0.5){
   game.logo();
 }
@@ -526,7 +537,7 @@ if(gameState === 3){
 }
 if(gameState === 4){
   game.start5()
-  seconds=60
+  seconds=59
 }
 
 if(gameState === 4.5){
@@ -601,7 +612,7 @@ if(gameState === "win"){
 if(gameState!="win"){
   if(seconds===0){
     minutes=minutes-1
-    seconds=60
+    seconds=59
 
 }
 
@@ -611,13 +622,13 @@ if(gameState!="win"){
 if(man.x<Width){
 
 }else{
-man_vel=-10
+man_vel=-Width/100
 man.changeImage("Left",Left)
 
 }
 
 if(man.x<0){
-man_vel=10
+man_vel=Width/100
 man.changeImage("Right",Right)
 }
 man.velocityX=man_vel;
@@ -673,7 +684,7 @@ man.velocityX=man_vel;
   mazerunner.collide(wall47)
   mazerunner.collide(wall48)
   
-
+  
 
 
   if(virusGroup2.isTouching(mazerunner)){
@@ -726,12 +737,12 @@ man.velocityX=man_vel;
     
     if(virus2.isTouching(wall45)){
 
-          virus2.velocityY=-4
+          virus2.velocityY=-3
        
       }
       if(virus2.isTouching(wall6)){
        
-          virus2.velocityY=4
+          virus2.velocityY=3
         
       }
           
@@ -792,7 +803,7 @@ function addition(){
     store_min=minutes;
     
     score.checkScore()
-    seconds=60
+    seconds=59
     antitode.destroy()
     win_music.play()
     gameState="win"
@@ -892,22 +903,22 @@ function subtraction() {
 
 function checkmask() {
 if(mask1.x===x2&&mask1.y===y2){
-
-mask1.destroy()
-life=life-1
+  mask1.x=0 
+  mask1.destroy()
+  life=life-1
 }
 if(mask2.x===x2&&mask2.y===y2){
-
+  mask2.x=0
   mask2.destroy()
   life=life-1
 }
 if(sanitizer1.x===x2&&sanitizer1.y===y2){
-
+  sanitizer1.x=0
   sanitizer1.destroy()
   life=life-1  
 }
 if(sanitizer2.x===x2&&sanitizer2.y===y2){
-  
+  sanitizer2.x=0
   sanitizer2.destroy()
   life=life-1    
 }
