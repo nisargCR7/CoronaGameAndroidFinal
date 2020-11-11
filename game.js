@@ -129,17 +129,7 @@ class Game {
     this.wrong.position(Width/2-Width/8, Height/10*8);
   
   }
-  
-  
-      getState(){
-          var gameStateRef  = database.ref("players/player"+player.index);
-          gameStateRef.on("value",function(data){
-             gameState = data.val();
-          })
-      
-        }
-      
-  
+
   
   
       async start(){ 
@@ -163,10 +153,11 @@ class Game {
         this.riddle.hide()
         this.hinttxt.hide()
         this.replay.hide()
-        
+       
         form = new Form()
-          if(gameState === 0){
-          form.display();
+
+        if(gameState === 0){
+          form.display(); 
           player = new Player();
           var playerCountRef = await database.ref('playerCount').once("value");
         if(playerCountRef.exists()){
@@ -181,8 +172,8 @@ class Game {
   logo(){
   background(img0)
   
-  if(seconds<55){
-    seconds=60
+  if(seconds<54){
+    seconds=59
     gameState+=0.5
     player.update()
   
@@ -250,7 +241,7 @@ class Game {
           
             this.next.mousePressed(()=>{
               minutes=9
-              seconds=60
+              seconds=59
               crowd_music.stop()
               qstate=0
               this.all.show()
@@ -267,8 +258,8 @@ class Game {
             this.txt.hide()
             this.box.hide()
             crowd_music.stop()
-            if(seconds===55){
-              seconds=60
+            if(seconds===54){
+              seconds=59
               gameState+=0.5
               player.update()
             } 
@@ -277,8 +268,8 @@ class Game {
         start6(){
          background(level1)
          
-          if(seconds===55){
-          seconds=60
+          if(seconds===54){
+          seconds=59
           gameState+=1
           player.update()
           
@@ -298,7 +289,7 @@ class Game {
           background(room1)
           this.box.show()
           this.txt.show() 
-          this.txt.style('fontSize',Width/20+"px")
+          this.txt.style('fontSize',Width/25+"px")
           this.txt.html("Congratulations...You are 1 step closer to the Antidote. Level-1 complete")
           this.txt.style('top',Width/10+'px')
           this.txt.style('left',Width/7+'px')
@@ -310,7 +301,7 @@ class Game {
           this.next.show()
           
             this.next.mousePressed(()=>{
-              seconds=60
+              seconds=59
               gameState+=0.5
               player.update()
             });
@@ -322,8 +313,8 @@ class Game {
             this.next.hide()
             this.txt.hide()
             this.box.hide()
-            if(seconds===55){
-              seconds=60
+            if(seconds===54){
+              seconds=59
               gameState+=0.5
               player.update()
             } 
@@ -356,7 +347,7 @@ class Game {
               if(gameState === 10){
               this.box.show()
               this.txt.show() 
-              this.txt.style('fontSize',Width/20+"px")
+              this.txt.style('fontSize',Width/25+"px")
               this.txt.html("Congratulations...You are 1 step closer to the Antidote. Level-2 complete.Solve the next riddles to open lab's door")
               this.txt.style('top',Width/10+'px')
               this.txt.style('left',Width/7+'px')
@@ -372,7 +363,7 @@ class Game {
                   this.box.hide()
                   this.txt.hide() 
                   this.next.hide()
-                  seconds=60
+                  seconds=59
                   gameState+=1
                   player.update()
                   seconds=store_sec
@@ -394,8 +385,8 @@ class Game {
                 this.next.hide()
                 this.txt.hide()
                 this.box.hide()
-                if(seconds===55){
-                  seconds=60
+                if(seconds===54){
+                  seconds=59
                   gameState+=0.5
                   player.update()
                 } 
@@ -709,7 +700,6 @@ class Game {
     store_sec=seconds;
     store_min=minutes;
     musicstate=1
-    // score.checkScore()
     gameState+=1
     player.update()
      
@@ -939,7 +929,7 @@ class Game {
       store_sec=seconds;
       store_min=minutes;
       musicstate=1
-      seconds=60
+      seconds=59
       gameState+=1
       player.update()
        
@@ -1105,7 +1095,7 @@ class Game {
     musicstate=1
     store_sec=seconds;
     store_min=minutes;
-      seconds=60
+      seconds=59
       gameState+=0.5
       player.update()
   }
@@ -1326,7 +1316,7 @@ class Game {
   function spawnVirus(){
     if(World.frameCount % 20 === 0) {
     var x1=random(0,Width)
-    var size=random(1.2,0.3)
+    var size=random(0.7,0.1)
     var virus;
     vel=vel+0.5;
     virus = createSprite(x1,-30,10,10)  ;
