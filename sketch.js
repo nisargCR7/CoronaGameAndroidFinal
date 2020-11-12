@@ -511,13 +511,17 @@ function  draw() {
 // canvas.touch-action: manipulation;
 if(gameState===0){
 
-  if(seconds<58){
+  if(seconds<55){
   form.playbut.show()
   form.hover(form.playbut,"play") 
   
-}}else{
+}else{
   form.playbut.hide()
 }
+}else{
+  form.playbut.hide()
+}
+  
 if(gameState === 0.5){
   game.logo();
 }
